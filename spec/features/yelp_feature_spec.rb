@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-	def create_restaurant(some_name)
-		Restaurant.create(:name => some_name)
+	def create_restaurant(some_name, some_description)
+		Restaurant.create(:name => some_name, :description => some_description)
 	end
 
 	describe 'the restaurant section' do
 
 		before(:all) do
-	    	create_restaurant 'Some restaurant'
+	    	create_restaurant 'Some restaurant','Some description'
 	  	end
 
 		describe '/restaurants' do
@@ -18,11 +18,12 @@ require 'spec_helper'
 		end
 
 		describe 'an individual restaurant' do
-			it 'has its own page' do
+			it 'has a description and its own page ' do
 				visit '/restaurants'
 				click_link 'Some restaurant'
 				expect(current_path).to eq '/restaurants/1'
 				expect(page).to have_css 'h1', text: 'Some restaurant'
+				expect(page).to have_css 'h2', text: 'Some description'
 			end
 		end	
 

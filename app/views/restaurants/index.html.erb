@@ -1,7 +1,8 @@
 <% @restaurants.each do |restaurant| %>
-
-	<%= link_to restaurant.name, restaurant %> 
-
+	<p>
+		<%= link_to restaurant.name, restaurant %> 
+		<%= restaurant.description %> 
+	</p>  
 <% end %>
 
 

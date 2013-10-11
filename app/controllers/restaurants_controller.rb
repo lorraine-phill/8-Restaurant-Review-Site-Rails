@@ -8,4 +8,19 @@ class RestaurantsController < ApplicationController
 		@restaurant = Restaurant.find(params[:id])
 	end
 
+	def new
+		@restaurant = Restaurant.new
+		# @question = @quiz.questions.build
+	end
+
+	def create
+		@restaurant = Restaurant.new(params[:restaurant].permit(:name, :description))
+		if @restaurant.save
+			redirect_to@restaurant
+		else
+		  flash.now[:error] = @restaurant.errors.full_messages.inspect
+		  render action: "new"
+		end
+	end	
+
 end
