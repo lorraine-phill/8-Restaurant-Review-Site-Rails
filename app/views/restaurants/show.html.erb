@@ -1,29 +1,60 @@
-<h1><%= @restaurant.name %></h1>
-	
-<h3><%= @restaurant.description %></h>
-<p></p>
+<!DOCTYPE>
+<html>
 
-<%= form_for([@restaurant, @review]) do |f| %>
-  <%= f.hidden_field :restaurant_id %>
-  <%= f.label :review %>
-  <%= f.text_area :comment, placeholder: 'Please add your review here' , size: "40x8" %>
+<head>
+<title>Schlep!</title>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type">
+    <meta content="text/javascript" http-equiv="Content-Script-Type">
+</head>
 
- <p></p>
- <%= f.label :rating %>
- <%= f.radio_button(:rating, 1) %> Inedible
- <%= f.radio_button(:rating, 2) %> Poor
- <%= f.radio_button(:rating, 3) %> Average
- <%= f.radio_button(:rating, 4) %> Good
- <%= f.radio_button(:rating, 5) %> Delicious
+<body>
 
-  <%= f.submit "Save your Review"%>
+<div id="entire-page">
+   
+   <!-- BEGIN: Header -->
+    <div id="header">
+          <img src="navbar.jpg">
+   </div>
+  <!-- END: Header -->
 
-<% end %>
+  <!-- BEGIN: Main page-->
+  <div id="main-page">
+      <div id="page-body" class="wrapper">
+        
 
-<% @restaurant.reviews.each do |review| %>
-  <p> Review:
-  	<%= review.comment %></br>
-  	Rating:
-  	<%= review.rating %>
-  </p>
-<% end %>
+    <h1><%= @restaurant.name %></h1>
+    <h3><%= @restaurant.description %></h>
+    <p></p>
+
+    <%= form_for([@restaurant, @review]) do |f| %>
+      <%= f.hidden_field :restaurant_id %>
+      <%= f.label :review %>
+      <%= f.text_area :comment, placeholder: 'Please add your review here' , size: "40x8" %>
+     <p></p>
+     <%= f.label :rating %>
+     <%= f.radio_button(:rating, 1) %> Inedible
+     <%= f.radio_button(:rating, 2) %> Poor
+     <%= f.radio_button(:rating, 3) %> Average
+     <%= f.radio_button(:rating, 4) %> Good
+     <%= f.radio_button(:rating, 5) %> Delicious
+     <%= f.submit "Save your Review"%>
+
+    <% end %>
+
+    <% @restaurant.reviews.each do |review| %>
+      <p> Review:
+      	<%= review.comment %></br>
+      	Rating:
+      	<%= review.rating %>
+      </p>
+    <% end %>
+
+    <% if flash[:error] -%>
+     <%= flash[:error] %>
+    <% end -%>
+
+  </body>
+
+</html>
