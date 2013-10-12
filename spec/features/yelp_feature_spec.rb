@@ -23,12 +23,12 @@ require 'spec_helper'
 				click_link 'Some restaurant'
 				expect(current_path).to eq '/restaurants/1'
 				expect(page).to have_css 'h1', text: 'Some restaurant'
-				expect(page).to have_css 'h2', text: 'Some description'
+				expect(page).to have_css 'h3', text: 'Some description'
 			end
 		end	
 
 		describe 'new restaurant form' do
-		    it 'creates a new restaurant' do
+		    it 'adds a new restaurant to list' do
 		      visit '/restaurants/new'
 
 			      within '.new_restaurant' do
@@ -43,5 +43,14 @@ require 'spec_helper'
 		    end
 		  end
 
+		describe 'the reviews section' do
+
+			it 'appears on the restaurant page' do
+				visit '/restaurants'
+				click_link 'Some restaurant'
+				find_field('comment').value.should eq 'This is a comment'
+			end
+
+		end
 
 	end

@@ -1,6 +1,27 @@
 <h1><%= @restaurant.name %></h1>
 	
-<h2><%= @restaurant.description %></h2>
+<h3><%= @restaurant.description %></h>
+<p></p>
 
+<%= form_for([@restaurant, @review]) do |f| %>
+  <%= f.hidden_field :restaurant_id %>
+  <%= f.label :review %>
+  <%= f.text_area :comment, placeholder: 'Please add your review here' , size: "40x8" %>
 
+ <p></p>
+ <%= f.label :rating %>
+ <%= f.radio_button(:rating, 1) %> Inedible
+ <%= f.radio_button(:rating, 2) %> Poor
+ <%= f.radio_button(:rating, 3) %> Average
+ <%= f.radio_button(:rating, 4) %> Good
+ <%= f.radio_button(:rating, 5) %> Delicious
 
+  <%= f.submit "Save your Review"%>
+
+<% end %>
+
+<% @restaurant.reviews.each do |review| %>
+  <p>
+  	<%= review.comment %>
+  </p>
+<% end %>

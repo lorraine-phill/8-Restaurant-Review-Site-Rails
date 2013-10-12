@@ -6,10 +6,14 @@ class RestaurantsController < ApplicationController
 
   	def show
 		@restaurant = Restaurant.find(params[:id])
+		@review = Review.new(:restaurant => @restaurant)
 	end
 
 	def new
 		@restaurant = Restaurant.new
+		@review = Review.new(:restaurant => @restaurant)
+		# @review = @restaurant.reviews.build
+
 		# @question = @quiz.questions.build
 	end
 
