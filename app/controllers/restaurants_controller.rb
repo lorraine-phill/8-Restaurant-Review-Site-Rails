@@ -13,8 +13,6 @@ class RestaurantsController < ApplicationController
 		@restaurant = Restaurant.new
 		@review = Review.new(:restaurant => @restaurant)
 		# @review = @restaurant.reviews.build
-
-		# @question = @quiz.questions.build
 	end
 
 	def create
