@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>YelpApp</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <title>Schelp! - Your most trusted online ratings site.</title>
+  <%= stylesheet_link_tag("public", media: "all") %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="header">
+	<img src="/images/Logo.png" width="150" height="100" alt="schelp Logo">
+</div>
 
 <%= yield %>
 
