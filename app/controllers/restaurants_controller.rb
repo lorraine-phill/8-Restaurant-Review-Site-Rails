@@ -18,7 +18,7 @@ class RestaurantsController < ApplicationController
 	def create
 		@restaurant = Restaurant.new(params[:restaurant].permit(:name, :description))
 		if @restaurant.save
-			redirect_to@restaurant
+			redirect_to @restaurant
 		else
 		  flash.now[:error] = @restaurant.errors.full_messages.inspect
 		  render action: "new"

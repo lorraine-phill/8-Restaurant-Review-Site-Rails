@@ -12,9 +12,12 @@
     <%= form_for([@restaurant, @review]) do |f| %>
       <%= f.hidden_field :restaurant_id %>
       <%= f.label :review %>
+      <div id="comment">
       <%= f.text_area :comment, placeholder: 'Please add your review here' , size: "40x8" %>
+    </div>
      <p></p>
-     <%= f.label :rating %>
+
+     <%= f.label :rating %><br>
      <%= f.radio_button(:rating, 1) %> Inedible
      <%= f.radio_button(:rating, 2) %> Poor
      <%= f.radio_button(:rating, 3) %> Average

@@ -10,6 +10,12 @@ body {
         line-height: 16px;
         background: #eee;
          }
+div#container {
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+    text-align: right;
+  }
 #header { 
         background: #252525;
         height: 60px; 
@@ -18,4 +24,7 @@ body {
         width:100%; 
         top:0; 
         text-align: center;
+        }
+#comment {
+        vertical-align: text-top;
         }
