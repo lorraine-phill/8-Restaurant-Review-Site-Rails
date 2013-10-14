@@ -9,6 +9,10 @@
     <h3><%= @restaurant.description %></h>
     <p></p>
 
+        <% if flash[:error] -%>
+     <%= flash[:error] %>
+    <% end -%>
+
     <%= form_for([@restaurant, @review]) do |f| %>
       <%= f.hidden_field :restaurant_id %>
       <%= f.label :review %>
@@ -31,13 +35,11 @@
       <p> Review:
       	<%= review.comment %></br>
       	Rating:
-      	<%= review.rating %>
+      	<%= review.text_rating %>
       </p>
     <% end %>
 
-    <% if flash[:error] -%>
-     <%= flash[:error] %>
-    <% end -%>
+
 
   </body>
 

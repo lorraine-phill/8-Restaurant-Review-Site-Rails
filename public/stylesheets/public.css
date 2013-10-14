@@ -9,12 +9,13 @@ body {
         font-size: 11px;
         line-height: 16px;
         background: #eee;
+        text-align: center;
          }
 div#container {
-  width: 750px;
+  width: 350px;
   margin-left: auto;
   margin-right: auto;
-    text-align: right;
+  text-align: left;
   }
 #header { 
         background: #252525;
