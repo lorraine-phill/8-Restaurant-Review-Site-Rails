@@ -1,10 +1,7 @@
 <!DOCTYPE>
 <html>
-
 <head>
-
 </head>
-
 <body>
 	 <%= form_for @restaurant do |f| %>
 	 <%= f.label :name, 'Name:' %>
@@ -12,14 +9,14 @@
 	 <p></p>
 	 <%= f.label :description, 'Description:' %>
 	 <%= f.text_field :description, placeholder: 'Restaurant description' %>
-	  <p></p>
-	  <%= f.submit "Create Restaurant" %>
+	 <p></p>
+	 <%= f.submit "Create Restaurant" %>
 	 <% end %>
 
 	 <% if flash[:error] -%>
 		 <%= flash[:error] %>
 	 <% end -%>
-</body>
 
+</body>
 </html>
 

@@ -7,8 +7,10 @@
 <body>
 	<% @restaurants.each do |restaurant| %>
 	<p>
-		<h2><%= link_to restaurant.name, restaurant %> </h2>
-		<h4><%= restaurant.description %> </h4>
+		<a class="hover">
+			<h2><%= link_to restaurant.name, restaurant %> </h2>
+		</a>
+			<h4><%= restaurant.description %> </h4>
 	</p>  
 <% end %>
 </body>
