@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Schelp! - Your most trusted online ratings site.</title>
+  <title>Schelp! - Your trusted online reviews site.</title>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+
   <%= stylesheet_link_tag("public", media: "all") %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div id="header">
-			<img src="/images/Logo.png" width="150" height="100" alt="schelp Logo">
-	</div>
-	
+	<div id="container">
+		<div id="sidebar">
+			     <div id="pic">
+						<img src="/images/Schlep.png" width="200" height="120" alt="Schelp Logo"></img>
+			     </div>
+			<p></p>
+			<ul style="padding: 0px;">
+	          <li class="download">
+	          	<a class="buttons" href="/restaurants">Restaurant List</a>
+	          </li>
 
-		<div id="container">
-
-
-
-	<%= yield %>
-
+	          <li class="download">
+	          	<a class="buttons" href="/restaurants/new">Add A Restaurant</a>
+	          </li>
+	        </ul>			
 		</div>
+		
+
+		<div id="main">
+			<h1 class="title">Your trusted online reviews site!</h1>
+			<%= yield %>
+		</div>
+
+	</div>
 
 </body>
 </html>
