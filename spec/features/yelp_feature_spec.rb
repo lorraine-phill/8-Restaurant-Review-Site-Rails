@@ -39,7 +39,7 @@ require 'spec_helper'
 			        click_button "Create Restaurant"
 			      end
 
-		      expect(current_url).to eq url_for(Restaurant.last)
+		      expect(current_url).to eq url_for(Restaurant)
 		      expect(page).to have_content 'New restaurant'
 		      expect(page).to have_content 'Restaurant description'
 		    end
