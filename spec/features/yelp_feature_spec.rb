@@ -24,8 +24,8 @@ require 'spec_helper'
 				click_link 'Some restaurant'
 
 				expect(current_path).to eq '/restaurants/1'
-				expect(page).to have_css 'h1', text: 'Some restaurant'
-				expect(page).to have_css 'h3', text: 'Some description'
+				expect(page).to have_css 'h2', text: 'Some restaurant'
+				expect(page).to have_css 'h4', text: 'Some description'
 			end
 		end	
 
