@@ -1,7 +1,6 @@
 Schlep Reviews Site
 =======================
 
-== README
 Project: Create a restaurant reviews app in Rails that is similar to Yelp
 
 Functionality:
@@ -10,9 +9,8 @@ Functionality:
 - You can click on a restaurant listing to go that restaurants page and either view or add a review
 - You can write a review and include a rating
 
-
-Rspec/ Capybara tests: 
-- Created feature specs and model specs
+Technologies:
+- Rspec/ Capybara tests: Created feature specs and model specs
 - Rails 4.0
 - Ruby 2.0
 - Postgres database
