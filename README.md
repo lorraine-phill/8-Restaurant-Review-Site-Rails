@@ -1,5 +1,5 @@
-Schlep Reviews Site
-=======================
+Schlep Restaurant Reviews Site
+==============================
 
 Project: Create a restaurant reviews app in Rails that is similar to that of Yelp
 
