@@ -1,9 +1,9 @@
 Schlep Reviews Site
 =======================
 
-Project: Create a restaurant reviews app in Rails that is similar to Yelp
+Project: Create a restaurant reviews app in Rails that is similar to that of Yelp
 
-Functionality:
+Functionality: 
 - Create a new restaurant using a form
 - The index page lists all restaurants
 - You can click on a restaurant listing to go that restaurants page and either view or add a review
