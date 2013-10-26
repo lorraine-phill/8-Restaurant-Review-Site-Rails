@@ -1,3 +1,6 @@
+Schlep Reviews Site
+=======================
+
 == README
 Project: Create a restaurant reviews app in Rails that is similar to Yelp
 
@@ -18,3 +21,6 @@ Rspec/ Capybara tests:
 - Nested routes
 
 ![alt text](https://s3.amazonaws.com/Github-14/Schlep.png "Yelp like review site")
+
+
+
