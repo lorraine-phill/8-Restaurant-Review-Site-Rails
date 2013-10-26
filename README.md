@@ -18,7 +18,7 @@ Technologies:
 - Postgres database
 - HTML5
 - CSS3
-- Nested roots
+- Includes the use of nested roots
 - Deployed to Heroku
 
 
