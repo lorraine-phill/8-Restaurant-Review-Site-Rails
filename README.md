@@ -7,7 +7,7 @@ Functionality:
 - Create a new restaurant using a form
 - The index page lists all restaurants
 - You can click on a restaurant listing to go that restaurants page and either view or add a review
-- You can write a review and include a rating
+- You can post a review that includes a rating
 
 Technologies:
 - Rspec/ Capybara tests: Created feature specs and model specs
