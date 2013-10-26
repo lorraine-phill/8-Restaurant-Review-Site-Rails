@@ -19,6 +19,6 @@ Technologies:
 - HTML5
 - CSS3
 - Includes the use of nested roots
-- Deployed to Heroku
+- Deployed to Heroku: http://schlep.herokuapp.com
 
 
