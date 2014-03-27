@@ -1,7 +1,7 @@
 Schlep Restaurant Reviews Site
 ==============================
 
-Project: Create a restaurant reviews app in Rails that is similar to that of Yelp
+Project: Create a restaurant reviews app in Rails that is similar in functionality to Yelp.com.
 
 ![alt text](https://s3.amazonaws.com/Github-14/Schlep.png "Yelp like restaurant review site")
 
